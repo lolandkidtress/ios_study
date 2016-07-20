@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="gettingAttention" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QP2-OM-PXU">
+                                <rect key="frame" x="155" y="50" width="65" height="30"/>
+                                <state key="normal" title="doAlert"/>
+                                <connections>
+                                    <action selector="doAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hUo-lD-Dad"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bva-sB-Z3y">
+                                <rect key="frame" x="148" y="107" width="79" height="30"/>
+                                <state key="normal" title="AlertButton"/>
+                                <connections>
+                                    <action selector="doButtonAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LtN-hA-YyK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezg-7p-fzC">
+                                <rect key="frame" x="170" y="152" width="35" height="24"/>
+                                <state key="normal" title="Input"/>
+                                <connections>
+                                    <action selector="doInputAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rv6-jY-63j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYQ-Va-Eh4">
+                                <rect key="frame" x="114" y="215" width="147" height="30"/>
+                                <state key="normal" title="Lights,Camera,Action"/>
+                                <connections>
+                                    <action selector="doAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7GL-gS-FUR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dys-uC-ore">
+                                <rect key="frame" x="146" y="253" width="82" height="36"/>
+                                <state key="normal" title="PlaySound"/>
+                                <connections>
+                                    <action selector="doPlaySound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BEI-Ui-UYU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCN-7U-EbN">
+                                <rect key="frame" x="143" y="304" width="89" height="20"/>
+                                <state key="normal" title="AlertSound"/>
+                                <connections>
+                                    <action selector="doPlayAlertSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XAs-WA-7sc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3r-0W-vkf">
+                                <rect key="frame" x="148" y="344" width="80" height="31"/>
+                                <state key="normal" title="vibrate"/>
+                                <connections>
+                                    <action selector="doVibrate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNI-g6-Ksl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL8-eV-1Xg">
+                                <rect key="frame" x="20" y="502" width="335" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJr-Lb-UFg">
+                                <rect key="frame" x="158" y="413" width="59" height="30"/>
+                                <state key="normal" title="Callback"/>
+                                <connections>
+                                    <action selector="doCallback:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aEh-co-WZm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="userOutput" destination="AL8-eV-1Xg" id="ygc-uD-BN4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279.5" y="323.5"/>
+        </scene>
+    </scenes>
+</document>
