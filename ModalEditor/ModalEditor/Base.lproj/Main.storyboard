@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Init-->
@@ -17,33 +18,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MJQ-Ap-jB5">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJQ-Ap-jB5">
                                 <rect key="frame" x="0.0" y="240" width="414" height="256"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EmailAddress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MX-iH-m0D">
-                                        <rect key="frame" x="139" y="18" width="137" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MyEmail@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leh-n0-fVZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyEmail@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leh-n0-fVZ">
                                         <rect key="frame" x="8" y="62" width="398" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdd-A7-VyA">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdd-A7-VyA">
                                         <rect key="frame" x="192" y="128" width="30" height="30"/>
                                         <state key="normal" title="Edit"/>
                                         <connections>
-                                            <segue destination="QAB-tD-frz" kind="presentation" identifier="toEditor" modalTransitionStyle="partialCurl" id="rDm-Hn-Hk6"/>
+                                            <segue destination="QAB-tD-frz" kind="popoverPresentation" identifier="toEditor" popoverAnchorView="Gdd-A7-VyA" id="rDm-Hn-Hk6">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EmailAddress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MX-iH-m0D">
+                                        <rect key="frame" x="139" y="18" width="137" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="137" id="MWH-7T-fOO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="1MX-iH-m0D" firstAttribute="centerX" secondItem="leh-n0-fVZ" secondAttribute="centerX" id="6eG-mB-oSr"/>
+                                    <constraint firstItem="1MX-iH-m0D" firstAttribute="top" secondItem="MJQ-Ap-jB5" secondAttribute="top" constant="18" id="8p4-bF-3CG"/>
+                                    <constraint firstItem="leh-n0-fVZ" firstAttribute="centerX" secondItem="Gdd-A7-VyA" secondAttribute="centerX" id="CgY-og-UxT"/>
+                                    <constraint firstItem="Gdd-A7-VyA" firstAttribute="top" secondItem="leh-n0-fVZ" secondAttribute="bottom" constant="45" id="Ctf-1q-UaI"/>
+                                    <constraint firstItem="leh-n0-fVZ" firstAttribute="leading" secondItem="MJQ-Ap-jB5" secondAttribute="leadingMargin" id="U3t-5k-ARa"/>
+                                    <constraint firstAttribute="height" constant="256" id="fKe-Hq-6CE"/>
+                                    <constraint firstItem="leh-n0-fVZ" firstAttribute="trailing" secondItem="MJQ-Ap-jB5" secondAttribute="trailingMargin" id="jD9-PU-2e3"/>
+                                    <constraint firstItem="leh-n0-fVZ" firstAttribute="top" secondItem="1MX-iH-m0D" secondAttribute="bottom" constant="23" id="keT-ix-1i3"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MJQ-Ap-jB5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NJo-eX-EAF"/>
+                            <constraint firstAttribute="trailing" secondItem="MJQ-Ap-jB5" secondAttribute="trailing" id="VI3-cq-dfi"/>
+                            <constraint firstItem="MJQ-Ap-jB5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="220" id="ZAm-Ec-Lz7"/>
+                            <constraint firstItem="MJQ-Ap-jB5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kWw-jY-v7R"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -67,16 +89,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W10-ZW-aw9">
-                                <rect key="frame" x="0.0" y="265" width="414" height="205"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W10-ZW-aw9">
+                                <rect key="frame" x="0.0" y="247" width="414" height="256"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EmailAddress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4C-dS-TkZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EmailAddress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4C-dS-TkZ">
                                         <rect key="frame" x="113" y="17" width="189" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="189" id="MmI-W0-9C8"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iXA-TB-O9f">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iXA-TB-O9f">
                                         <rect key="frame" x="8" y="62" width="398" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -84,7 +109,7 @@
                                             <action selector="hideKeyBoard:" destination="QAB-tD-frz" eventType="editingDidEndOnExit" id="7KF-Rw-XHG"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DK7-XC-Mct">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DK7-XC-Mct">
                                         <rect key="frame" x="190" y="135" width="34" height="30"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
@@ -94,9 +119,24 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="1pU-po-AOw"/>
+                                    <constraint firstItem="e4C-dS-TkZ" firstAttribute="centerX" secondItem="iXA-TB-O9f" secondAttribute="centerX" id="MJJ-oy-ddO"/>
+                                    <constraint firstItem="iXA-TB-O9f" firstAttribute="leading" secondItem="W10-ZW-aw9" secondAttribute="leadingMargin" id="MoX-gl-phi"/>
+                                    <constraint firstItem="iXA-TB-O9f" firstAttribute="trailing" secondItem="W10-ZW-aw9" secondAttribute="trailingMargin" id="WoE-ym-O7o"/>
+                                    <constraint firstItem="e4C-dS-TkZ" firstAttribute="top" secondItem="W10-ZW-aw9" secondAttribute="top" constant="17" id="WyF-Yy-z4z"/>
+                                    <constraint firstItem="iXA-TB-O9f" firstAttribute="top" secondItem="e4C-dS-TkZ" secondAttribute="bottom" constant="24" id="f6v-o2-WWT"/>
+                                    <constraint firstItem="DK7-XC-Mct" firstAttribute="top" secondItem="iXA-TB-O9f" secondAttribute="bottom" constant="43" id="k4U-cd-AX4"/>
+                                    <constraint firstItem="iXA-TB-O9f" firstAttribute="centerX" secondItem="DK7-XC-Mct" secondAttribute="centerX" id="n4b-z4-pZL"/>
+                                </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W10-ZW-aw9" firstAttribute="leading" secondItem="Sx9-3M-WlM" secondAttribute="leading" id="3Lh-ph-WQ8"/>
+                            <constraint firstItem="W10-ZW-aw9" firstAttribute="top" secondItem="Qh2-ic-xAX" secondAttribute="bottom" constant="227" id="9uy-CO-K2t"/>
+                            <constraint firstAttribute="trailing" secondItem="W10-ZW-aw9" secondAttribute="trailing" id="vO4-F5-9t6"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>

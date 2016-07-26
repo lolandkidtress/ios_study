@@ -11,6 +11,11 @@ import UIKit
 
 class EditorViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        preferredContentSize = CGSizeMake(600,400)
+    }
+    
     override func viewWillAppear(animated: Bool) {
         emailField.text =
         (presentingViewController as! ViewController).emailLabel.text
